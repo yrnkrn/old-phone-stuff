@@ -1,0 +1,72 @@
+Path: news-server.technion.ac.il!technion!barilvm!frmop11!psuvm!cunyvm!ukma!darwin.sura.net!jvnc.net!yale.edu!
+ think.com!sdd.hp.com!news.cs.indiana.edu!lynx!nmsu.edu!dante!kcarver
+From: kcarver@nmsu.edu (Kenneth Carver)
+Subject: Re: Led in a phone?
+Message-ID: <1992Apr27.184853.15972@nmsu.edu>
+Sender: usenet@nmsu.edu
+Organization: New Mexico State University
+References: <ckwPJB1w164w@saviour.UUCP>
+Date: Mon, 27 Apr 1992 18:48:53 GMT
+Lines: 61
+
+In article <ckwPJB1w164w@saviour.UUCP> ajb@saviour.UUCP (Alan Buck) writes:
+>    I need some help. We have two phones in our house one upstairs and one
+>down. The modem is connected to the one downstairs. What I propose to do is
+>attach an Led or other light to the phone upstairs to indicate when the
+>phone downstairs is in use(thereby preventing people from picking it up
+>while I'm on the modem). Any ideas on how yo go about this?
+
+
+This seems to be such a common problem, I decided to post this
+circuit.  I have recently e-mailed it to to a couple people with
+the same problem.  The circuit I built gives a visual indication
+at each extension when any extension is off-hook.  It is line-
+powered, and the maximum number that can be used on our system is
+three.  Since they all draw power at the same time to light the
+leds, any more indicators would cause an off-hook condition.  Some
+changes could be made to reduce the current draw, to allow using
+more indicators, but the brightness of each led would suffer.  The
+leds I used are tiny, but amazingly bright on just a couple milliamps.
+I picked them up from a surplus catalog, I can't remember which one.
+If you were to use battery power for the circuit, you could use almost
+any number of indicators.  I had use only for three, and I did not
+want to worry about replacing batteries.  If I remember correctly, our
+pbx required a load of about 20 milliamps before the line failed to
+hang up.  This circuit draws about 5 milliamps when off-hook, much less
+when on-hook.  It senses the drop in line voltage from about 46 volts
+to 6 volts when an extension is picked up.  The zener voltage should be
+well above the off-hook voltage of your system, and well below the
+on-hook voltage.  The transistors are small high-voltage npn types I had
+on hand.  The led also flashes with the ring voltage. Putting a suitable
+MOV across the line is a good precaution to prevent lightning damage.
+
+  (+)_______________________________________________________________
+ green           |                   |                              |
+                 /                   /                              /
+                 \  2200             \   100K             100K      \
+                 /                   /                              /
+  1N4148         \                   \                              \
+        _________|                   |                              |
+    ___|___   ___|___                |                           ___|___/
+      / \     \     /   LED          |                  10V     /  / \
+    /_____\   __\ /__                |                 ZENER     /_____\
+       |         |                   |                              |
+       |_________|                   |                              |
+                 | c                 |                              |
+                  \  |               |                              |
+           MPSA42   \|_______________|_________________ c           |
+                    /|            ___|___               \  |        |
+                 |/  |              / \         MPSA42    \|________|
+                 | e              /_____\                 /|     ___|___
+                 |          1N4148   |                 |/  |       / \
+                 |                   |                 | e       /_____\
+                 |                   |                 |            |
+  (-)____________|___________________|_________________|____________|
+  red                                                             1N4148
+
+All intersecting lines are connected.  Don't you hate ascii schematics?
+          ------------------------------------------------------
+         |     Ken Carver         *  When in charge, delegate.  |
+         |        -*-             *  When in trouble, ponder.   |
+         |  kcarver@nmsu.edu      *  When in doubt, mumble.     |
+          ------------------------------------------------------

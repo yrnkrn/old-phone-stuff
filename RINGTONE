@@ -1,0 +1,296 @@
+Article 16542 of comp.dcom.telecom:
+Path: discus!technion!barilvm!psuvm!ysub!usenet.ins.cwru.edu!agate!telecom-request
+From: andyb@rags.coat.com (Andy Behrens)
+Newsgroups: comp.dcom.telecom
+Subject: Ringing Tones Around the World
+Message-ID: <telecom11.374.1@eecs.nwu.edu>
+Date: 17 May 91 11:16:22 GMT
+Sender: Telecom@eecs.nwu.edu
+Organization: TELECOM Digest
+Lines: 280
+Approved: Telecom@eecs.nwu.edu
+X-Submissions-To: telecom@eecs.nwu.edu
+X-Administrivia-To: telecom-request@eecs.nwu.edu
+X-Telecom-Digest: Volume 11, Issue 374, Message 1 of 6
+
+Pat,
+
+This is the list that Rick Broadhead was asking for.  (I've mailed him
+a copy).  I can't find this in the Telecom archives - maybe you want
+to put a copy there.
+
+
+Regards,
+Andy
+
+         ========================================
+                     ringing.tones
+         ========================================
+
+> From: clive@x.co.uk (Clive Feather)
+> Subject: Tones and Country Codes
+> Date: 29 Oct 90 10:02:08 GMT
+
+I just received British Telecom's latest international phone guide. A
+new feature in this is descriptions of the tones used in each country
+for ringing and engaged. Having merged this with my country codes
+list, I thought that readers might be interested.
+
+A few notes:
+
+  BT list two country codes I haven't seen before:
+    905   Turkish Cyprus
+    290   St. Helena
+
+Six countries which are not directly diallable from the UK (and so no
+country code is given) are not listed in the last table of country
+codes I took from the Digest. Does anyone know their country codes ?
+
+    Antarctica Australian Territory
+    Chatham Islands
+    Midway Island
+    Pitcairn Islands
+    Tristan da Cunha
+    Wake Island
+
+In v10i763, Jim Rees asks for the shortest world-wide unique number.
+The guide gives the lengths of numbers for some countries. St. Helena
+(290) has three digit numbers! Country codes 247, 674, 678, and 680
+have four digit numbers.
+
+Here is the up-to-date list. Lines beginning with # are comments.
+Lines beginning with + are continuation lines, and repeat the code and
+tone info.
+
+# Tone codes (first is ring, second is engaged):
+#  A: double ring, repeated regularly (UK ringing tone)
+#  B: equal length on/off tones - about 1Hz (UK & USA engaged tone)
+#  C: slow equal length on/off tones
+#  D: fast equal length on/off tones - 2Hz to 3Hz
+#  E: tones separated by long pauses (USA ringing tone)
+#  F: long tones separated by short pauses
+
+1            NANP (USA, Canada, and the Carribean)
++1  AB        Anguilla, Dominica, Grenada & Carriacou, Montserrat,
++1  AB        St Kitts and Nevis, St Lucia, St Vincent & Grenadines,
++1  AB        Virgin Islands (UK)
++1  CB        Bahamas, Bermuda, Cayman Islands, Puerto Rico,
++1  CB        Virgin Islands (US)
++1  EB        Barbados, Canada, Dominican Republic, Jamaica,
++1  EB        United States of America
++1  EF        Antigua & Barbuda
++1  FD        Turks and Caicos Islands
+
+20  CF       Egypt
+210          (reserved for Morocco)
+211          (reserved for Morocco)
+212 EB       Morocco
+213 CB       Algeria
+214          (reserved for Algeria)
+215          (reserved for Algeria)
+216 EB       Tunisia
+217          (reserved for Tunisia)
+218 CF       Libya
+219          (reserved for Libya)
+220 AB       The Gambia
+221 CD       Senegal
+222          Mauritania
+223 CB       Mali
+224 EC       Guinea
+225 CD       Cote d'Ivoire
+226 EB       Burkina Faso (Upper Volta)
+227 CF       Niger
+228 CB       Togolese Republic
+229 CB       Benin
+230 AB       Mauritius
+231 ED       Liberia
+232 CB       Sierra Leone
+233 ED       Ghana
+234 CF       Nigeria
+235 CB       Chad
+236 EB       Central African Republic
+237 EB       Cameroon
+238 CD       Cape Verde
+239 CB       Sao Tome and Principe
+240          Equatorial Guinea
+241 EB       Gabonese Republic
+242 CD       Congo
+243 CD       Zaire
+244 CD       Angola
+245 EC       Guinea-Bissau
+246          Diego-Garcia
+247 [EA]B    Ascension Island [4 digit numbers]
+248 AB       Seychelles
+249          Sudan
+250 CB       Rwandese Republic
+251 ED       Ethiopia
+252 CB       Somalia
+253 EB       Djibouti
+254 AF       Kenya
+255 AD       Tanzania including Zanzibar
+256 [AC]E    Uganda
+257 CB       Burundi
+258 EB       Mozambique
+259          (assigned to Zanzibar, but use 255 54)
+260 EF       Zambia
+261 CB       Madagascar
+262 CB       Reunion (France)
+263 AB       Zimbabwe
+264 AB       Namibia
+265 ED       Malawi
+266 AD       Lesotho
+267 AB       Botswana
+268 AB       Swaziland
+269          Mayotte Island (part of France) and Comoros
+27  AB       South Africa
+290 FB       St. Helena [3 figure numbers]
+295 ED       San Marino (not used at present - 39 541 used)
+296 AB       Trinidad and Tobago (not used at present - 1 809 used)
+297 EB       Aruba
+298 ED       Faroe Islands
+299 ED       Greenland
+
+30  ED       Greece
+31  ED       Netherlands
+32  CD       Belgium
+33  CB       France (Metropolitan), Andorra (33 628), Monaco (33 93)
+34  ED       Spain
+350 AB       Gibraltar
+351 EB       Portugal
+352 ED       Luxembourg
+353 AB       Eire (Irish Republic)
+354 CD       Iceland
+355          Albania
+356 AB       Malta
+357 AF       Cyprus
+358 ED       Finland
+359 ED       Bulgaria
+36  FD       Hungary
+37  ED       Federal Republic of Germany (Eastern Portion, former DDR)
+38  E[BD]    Yugoslavia
+39  ED       Italy, San Marino (39 541, see also 295), Vatican City (39 6 6982)
+
+40  CB       Romania
+41  EB       Switzerland, Liechtenstein (41 75)
+42  ED       Czechoslovakia
+43  ED       Austria
+44  AB       United Kingdom
+45  BD       Denmark
+46  ED       Sweden
+47  ED       Norway
+48  EB       Poland
+49  ED       Federal Republic of Germany (Western Portion)
+
+500 EB       Falkland Islands
+501 ED       Belize
+502 CD       Guatemala
+503 EB       El Salvador
+504 CD       Honduras
+505 EB       Nicaragua
+506 EB       Costa Rica
+507 EA       Panama
+508 CB       St. Pierre et Miquelon (France)
+509 [EF]B    Haiti
+51  EB       Peru
+52  ED       Mexico
+53  CB       Cuba
+54  EB       Argentina
+55  EB       Brazil
+56  AB       Chile
+57  ED       Colombia
+58  CD       Venezuela
+590 CF       Guadeloupe (France), including St. Barthelemy and French side
++590CF        of St. Martin
+591 EB       Bolivia
+592 AB       Guyana
+593 ED       Ecuador
+594 ED       French Guiana
+595 EB       Paraguay
+596 CB       Martinique (part of France)
+597 EB       Suriname
+598 EB       Uruguay (East Republic)
+599 EB       Netherlands Antilles (Sint Maarten, Saba, Statia, Curacao,
++599EB        Bonaire)
+
+60  AB       Malaysia
+61  AB       Australia
+62  EB       Indonesia
+63  EB       Philippines
+64  AB       New Zealand
+65  AB       Singapore
+66  ED       Thailand
+670 EB       Northern Mariana Islands (Saipan)
+671 EB       Guam
+672 AB       Australian External Territories (Norfolk Island, Christmas Island,
++672AB        Cocos I.)
+673 AB       Brunei Darrusalm
+674 EB       Nauru [4 digit numbers]
+675 AB       Papua New Guinea
+676 EB       Tonga
+677 DB       Solomon Islands
+678 ED       Vanuatu (New Hebrides) [4 digit numbers]
+679 AF       Fiji Islands
+680 EB       Palau [4 digit numbers]
+681          Wallis and Futuna
+682 AB       Cook Islands
+683          Niue Island
+684 EB       American Samoa
+685 AB       Western Samoa
+686 EB       Kiribati Republic (Gilbert Islands)
+687 CB       New Caledonia
+688          Tuvalu (Ellice Islands), Saipan
+689 CB       French Polynesia
+690          Tokelan (Tokelau ?)
+691 EB       F.S. of Polynesia (Micronesia ?)
+692 EB       Marshall Islands
+
+7   EB       Union of Soviet Socialist Republics
+
+81  EB       Japan
+82  FB       Korea (Republic of) (South)
+84           Viet Nam
+850 ED       Democratic People's Republic of Korea (North)
+852 AB       Hong Kong
+853 EB       Macao
+855          Kampuchea (Cambodia)
+856          Laos
+86  CB       China (866 assigned to Taiwan, but see also 886)
+870          Reserved for Inmarsat
+871          Inmarsat (Atlantic East)
+872          Inmarsat (Pacific)
+873          Inmarsat (Indian)
+874          Inmarsat (Atlantic West)
+875          Reserved for Inmarsat
+876          Reserved for Inmarsat
+877          Reserved for Inmarsat
+878          Reserved for national mobile telephone purposes
+879          Reserved for national mobile telephone purposes
+880 AB       Bangladesh
+886 EB       Taiwan (normally used, but not CCITT allocation - see 866)
+
+90  EB       Turkey, Turkish Cyprus (90 5)
+91  AB       India
+92  [EA][BD] Pakistan
+93           Afghanistan
+94  AB       Sri Lanka
+95  EB       Burma
+960 AF       Maldives
+961 CB       Lebanon
+962 AB       Jordan
+963 EB       Syrian Arab Republic
+964 AB       Iraq
+965 EB       Kuwait
+966 EB       Saudi Arabia
+967 EB       Yemen Arab Republic
+968 FB       Oman
+969 ED       Yemen Democratic Republic (united with Y.A.R. 967)
+971 AB       United Arab Emirates
+972 EB       Israel
+973 AB       Bahrain
+974 AB       Qatar
+975 AC       Bhutan
+976          Mongolia
+977 CE       Nepal
+98  ED       Iran
+
+

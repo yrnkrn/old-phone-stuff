@@ -1,0 +1,112 @@
+From: brendan@otc.otca.oz (Brendan Jones)
+Newsgroups: sci.electronics
+Subject: Phone In Use circuits
+Date: 18 Feb 91 22:08:12 GMT
+
+There have been a few calls recently in sci.electronics for phone in use
+circuits (ie a circuit that lights a LED when an extension phone is off
+hook).
+
+Following are two circuits I archived some time ago from sci.electronics.
+The first appears pretty complete and requires an external 5V power supply.
+The second seems to be a loop current trap that enables you to move from
+one extension phone to another without leaving the first phone off hook.
+
+I don't know how well either of these circuits work as I haven't actually
+built them.
+
+---8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<---
+
+PHONE IN USE CIRCUIT
+--------------------
+
+I thought I would try to post the schematic.  This circuit requires a separate
+5 volt supply.  The branch of the circuit that contains C1, C2 & R5, R6 is
+only used as a passive tap. (So you can record the line when the rest of the
+circuit says 'off hook'.  It can be removed if not needed.  If used, it can
+directly drive a microphone input to a portable recoreder.
+
+The Output of Q2 completes a path to ground when the phone lines gives an off
+hook reading.  This can drive a relay (for a tape recorder motor) or an LED.
+Be sure to include a current limiting resistor if an LED is used.  Also, D1
+may be ommited if a non-inductive load is used (Relays and incandescent (sp?)
+lamps are inductive)
+
+The LED thingy like this that I made for my phone flashes nicely when the phone
+rings (at the 20..25 Hz ring freq), so I can turn the ringer off, and still
+get silent ring indication (a feature, not a bug)
+
+Well, its not exactly postscript(tm), but if you stand back and squint, you'll
+get the idea.
+
+      R5
+<----+^v+                       +----------+--------* +6vdc (I use 5 volts)
+   R6>  |                       |        D1_
+     <  |                     R3>          ^          ___
+<----+  |                       <          +--------> Out
+     |  |                       | R8   Q2|/
+   C1=C2=                       +-^v-+---|
+     |  |   R1 BR1__        Q1|/     |   |\v
+*----+------v^---|  |--+--+---|    R4>     |
+        |        |~+|R7<C3L   |\v    <     |
+        |   R2   |~-|  >  T     |    |     |
+*-------+---v^---|__|--+--+-----+----+-----+--------* Ground
+                       |_
+                      ///
+
+R1, R2	2.2M				Reproduced (kind of) without
+R3, R4	470K				permission.   Copyright 1980
+R5	470				TAB BOOKS Inc.
+R6	100
+R7	100K
+R8	220K
+C1, C2	0.01uf, 100V
+C3	1.0 uf
+BR1	Full wave Bridge Rectifier, about 200 VDC (or higher)
+D1	HEP R0052 (I use 1N400*)
+Q1, Q1	HEP S9100 -or- NTE-172a
+
+---8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<---
+
+From: barber@beowulf.ucsd.edu (Terri Barber)
+Newsgroups: sci.electronics
+Subject: Loop current trap
+Date: 2 Jul 90 21:30:58 GMT
+
+Okay, let's see if I can remember how to do it (I didn't post the original,
+I just want to stick my $.02 in....
+
+Please excuse the ascii graphics....
+
+-------------------+------+----
+                   |      |
+                   |       /
+                   |      /   momentary switch
+                   |      |
+                   |      /
+                   |      \   1200 Ohm
+		   |      /
+		 -----____|
+		  / \
+                 /___\  SCR
+		   |
+		   /
+		   \  600 Ohm
+		   /
+		   |     ^^
+	         -----  //
+		  / \  //
+                 /___\    LED
+		   |
+		   |
+-------------------+---------
+
+---8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<-----8<---
+
+I hope this helps...
+
+--
+Brendan Jones  | ACSnet:  brendan@otc.otca.oz.au               | What does
+R&D Contractor |   UUCP:  {uunet,mcvax}!otc.otca.oz.au!brendan | your
+Services R&D   |  Phone:  (02)2873128     Fax:  (02)2873299    | company
+|||| OTC ||    |  Snail:  GPO Box 7000 Sydney 2001, AUSTRALIA  | export?

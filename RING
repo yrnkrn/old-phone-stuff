@@ -1,0 +1,48 @@
+Article 10682 of sci.electronics:
+Path: discus!technion!barilvm!psuvm!psuvax1!rutgers!news.cs.indiana.edu!noose.ecn.purdue.edu!mentor.cc.purdue.edu!lairdkb
+From: lairdkb@mentor.cc.purdue.edu (Kyler Laird)
+Newsgroups: sci.electronics
+Subject: DTMF Receiver, Ring Generator, ... (My Solution)
+Message-ID: <16414@mentor.cc.purdue.edu>
+Date: 10 Nov 90 08:15:40 GMT
+Reply-To: lairdkb@mentor.cc.purdue.edu (Kyler Laird)
+Organization: Purdue University
+Lines: 35
+
+I've received several requests for info on the circuit I'm using to ring a
+telephone.
+
+To all who are interested:
+
+1) Please realize it's far from perfect.
+
+2) Give me some time to respond in depth - I must finish the project and
+present it this Monday.  (Aaaargh!)
+
+
+Basic Description:
+
+Using a transistor was a big step for me.  I'm an analog virgin.  I'm quite
+comfortable with digital, though.  ...soo...I didn't use nifto keen RC
+circuits and coils and transformers (o.k. one is the other) to do the job.
+
+Instead, I use a 555 to drive two optoisolators (anode of one, cathode of
+other).  These switch two NPN power transistors which are being fed ~35VDC
+each (with a common ground).  I used a transformer to supply 60VAC center
+tapped (one half for each transistor) and filtered the power through a
+full wave rectifier and capacitor (one set for each side).
+
+~50VAC (seems to change every time I measure it) @ ~22Hz (I just kept plugging
+in resistors.) comes out.
+
+I'm betting that many of you are slapping your heads, thinking "Geez!  Why
+didn't he just use a PDQXYZ5 circuit!!??"  (about the same thing I feel when
+I see people who just keep typing in the same series of commands instead of
+using batch files/scripts...)  Again, this was the solution I came up with
+and it works (for some phones).  Success!!!
+
+I'll post more detail when I'm caught up a bit more.  (HA!)
+
+--kyler
+
+

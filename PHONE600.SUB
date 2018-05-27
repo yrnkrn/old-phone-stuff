@@ -1,0 +1,59 @@
+Newsgroups: sci.electronics
+Subject: Re: Telephone interface
+From: hilbig_t@qis.dofasco.ca
+Date: 8 Oct 92 08:58:52 GMT
+
+This problem is typical of a modem that uses one pair of lines for incoming
+and outgoing signals.  The demodulator circuit only wants to hear the
+incoming signal and not the outgoing signal of the modulator circuit.  To
+do this, a hybrid circuit is placed in front of the input circuit (in
+your   case, this will be the DTMF decoder) that eliminates the outgoing
+signal.
+
+
+
+	Vspeech  >-----------------------
+	from LM386			|
+					|
+					|
+		     R1 10K		|
+		-----/\/\/----|		|
+		|	      |		|
+		|	   /| | R2 10K	|
+		|	 / -|---/\/\/---|
+		|      /    | 		\
+     Vdtmf <----------<     |		/  R3 600ohm
+     to SSI202	       \    | 		\
+			 \ +|-----------|
+			   \|		|
+					|  600:600 Transformer
+					|
+					--) || (------
+					  ) || (      To Telephone line
+					  ) || (
+					  ) || (------
+					  |
+				         GND
+
+
+The speech voltage at the transformer is halved by the 600 ohm resistor; you
+may have to increase your output gain.
+
+The transmitting speech voltage will across the matching resistor R3 will
+appear as a common mode signal to the op-amp and effectively eliminated.
+You can work this out mathematically by considerring the transformer to be
+a voltage source (say Vin) in series with a 600 ohm resistor.  The voltage
+Vdtmf works out to equal Vin, regardless of the Vdtmf output signal.
+
+The circuit assumes a perfect match of 600 ohms across the spectrum.  This
+is impractical but should not be a problem for your project.  Your DTMF
+decoder may pick up a little bit of the speech signal, but it shouldn't
+cause any false results.
+
+
+Good luck, Tom Hilbig
+
+Thomas Hilbig,
+hilbig_t@qis.dofasco.ca                 Telephone:  (416) 544-3761
+My mail is sick these days, if you get a failure, send it to
+hauser_s@eis.dofasco.ca

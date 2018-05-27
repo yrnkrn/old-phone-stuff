@@ -1,0 +1,58 @@
+Article 11591 of sci.electronics:
+Path: discus!technion!barilvm!psuvm!cunyvm!uupsi!njin!rutgers!usc!wuarchive!uunet!pilchuck!ssc!tad
+From: tad@ssc.UUCP (Tad Cook)
+Newsgroups: sci.electronics
+Subject: Re: Questions about cordless phones
+Summary: cordless fone freqs
+Message-ID: <716@ssc.UUCP>
+Date: 31 Dec 90 04:56:31 GMT
+References: <52@bootsie.UUCP>
+Organization: very little
+Lines: 76
+
+The base units of the older sets used 1.69MHz, 1.71 MHz, 1.73 MHz
+to transmit to the handset.  They used channels around 49 MHz
+to go from the handset to the base.  The 1.7 Mhz band was phased
+out, and now the base units operate at 46 MHz.
+
+Base         Handset
+
+46.61 MHz    49.67  MHz
+46.63 MHz    49.845 MHz
+46.67 MHz    49.86  MHz
+46.71 MHz    49.77  MHz
+46.73 MHz    49.875 MHz
+46.77 MHz    49.83  MHz
+46.83 MHz    49.89  MHz
+46.87 MHz    49.93  MHz
+46.93 MHz    49.99  MHz
+46.97 MHz    49.97  MHz
+
+
+If you listen with a VHF scanner radio, the best listening is on
+the base unit side, as this side transmits BOTH sides of the call.
+
+Several handset freqs, including 49.83, 49.845, 49.86, and I think
+49.89 MHz are shared with kids walkie talkies, real CHEAP radio
+controlled toys, and those wireless "nursery monitors" used in baby's
+room.  In fact, if you drive around any residential area with a
+scanner, there is a continuous carrier on 49.83 and 49.86 MHz from
+all the nursery monitors.
+
+The FCC recently ruled that the manufacturers do not have to stick
+to the assigned channels anymore, as long as they are within the
+band, so things should get a LOT more chaotic soon.
+
+The security code prevents folks from using another cordless phone
+to make calls on your base unit.  It does nothing for voice
+privacy.  Cordless phones are NOT private.  It is legal to listen
+to them, and quite easy.
+
+Tad Cook
+Seattle, WA
+Packet: KT7H @ N7HFZ.WA.USA.NA
+Phone: 206/527-4089
+MCI Mail: 3288544
+Telex: 6503288544 MCI UW
+USENET:...uw-beaver!sumax!amc-gw!ssc!tad
+or, tad@ssc.UUCP

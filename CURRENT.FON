@@ -1,0 +1,64 @@
+Article 93761 of sci.electronics:
+From: tso@cephalo.neusc.bcm.tmc.edu (Dan Ts'o)
+Newsgroups: comp.sys.laptops,comp.dcom.modems,sci.electronics
+Subject: Re: Digital Phone Lines Spell D-A-N-G-E-R
+Date: 7 Oct 1994 07:10:23 GMT
+
+In article <santraCx6AJB.L46@netcom.com> santra@netcom.com (Sandy Santra) writes:
+)Digital phone systems run current through their phone lines.
+)This current is capable of *frying* modems, including PCMCIA
+)modems--as in: PLUG THIS IN AND YOU CAN KISS YOUR MODEM GOODBYE.
+)One alternative is to buy a Modem Saver, a product which you can
+)use to test a phone line before connecting it to your laptop's
+)modem.  IBM makes the Modem Saver, and you can order it by
+)calling 1-800-388-7080.  Ask for part #73G5395.  It's $25.
+)
+)The Modem Saver will tell you whether the phone line you have
+)connected it to is a (1) normal line, (2) a reversed polarity
+)line, or (3) a digital line (with a current of more than 90
+)milliamps).  If it registers as a digital line, you should NOT
+)plug your modem into the line.  It will destroy it.  If the
+)voltage is below 90 milliamps, it apparently may register as a
+)"normal" line, but at least you know that plugging the line into
+)your modem won't damage it.
+
+	Radio Shack sells a similar device without the high current function.
+It detects one or two lines on an RJ-11 and tells you its polarity. It costs
+$6. The schematic is:
+
+
+	--------+----------+
+		\          |
+	Line 1	/          V  red/green LED
+		\680ohms   |
+		/ .5W      |
+	--------+----------+
+
+
+	The circuit for Line 2 is identical. Note that each red/green LED comes
+standard as reverse wired (red LED "forward", green LED "reversed).
+
+	Based on the above, I think an appropriate modification to include
+a high current indicator would be: (I've tested it)
+
+
+	     20ohm
+	--+-\/\/\/--+-----------+----------+
+	  |         |		\          |
+	  +--->|----+		/          V  red/green LED
+	   red/green		\680ohms   |
+	     LED		/ .5W      |
+	------------------------+----------+
+
+	You can adjust the 20ohm resistor value to set what is considered
+"high current". 20ohms lights the LED at around 90ma.
+	Total parts costs <$4, or if you use Radio Shack's $6 line tester and
+add the above resistor and LED, then <$7. (I'm not faulting IBM for charging
+$30).
+
+	This whole issue really bothers me, because it means that I can't
+bring a PCMCIA modem with me on trips and count on it working at any given
+hotel. That means I should carry around my pocket modem just in case. So then
+what's the point of having the PCMCIA modem!
+
+

@@ -1,0 +1,49 @@
+Newsgroups: soc.culture.usa,soc.culture.europe,soc.culture.nordic,soc.culture.german,sci.electronics
+From: finns@hal.nta.no (Finn Stafsnes FBA)
+Subject: Re: How universal are phones these days?
+Date: Wed, 28 Apr 93 14:30:34 GMT
+
+I believe it is correct that all telecom operators use the same frequencies.
+However, there are (at least) two options for the levels. I believe that there
+is 6 dB level difference between the options. To complicate the situation some
+operators require that the level shall be regulated depending upon the
+subscriber line attenuation. (This is done by estimating the DC current in the
+line.)
+
+For loop pulse dialling there are (at least) three different possibilities:
+
+Number dialled:   1  2  3  4  5  6  7  8  9  0   (n)
+Sys. 1, # pulses: 1  2  3  4  5  6  7  8  9 10   (p=n, n=1,2,,9  p=10, n=0)
+Sys. 2, # pulses: 2  3  4  5  6  7  8  9 10  1   (p=n+1)
+Sys. 3, # pulses: 9  8  7  6  5  4  3  2  1 10   (p=10-n)
+
+Sys. 1 is used in most countries (including most of Norway).
+Sys. 2 is used in Sweden.
+Sys. 3 is used in a few countries (including the capital of Norway).
+Except from what is written here I am not sure if my knowledge of which
+countries are using Sys.2 and Sys.3 is based upon rumours or facts. If
+anybody know where they are used, please let me know.
+
+But even if you are able to send a number from your "foreign" phone or modem or
+whatever-it-is, you have no guarantee that all is well. Different operators use
+different transmission levels which means that the gains for transmission and
+receiving amplifiers should be adjusted accordingly. Different operators use
+different matching impedances for the 2-4 and 4-2 wire conversion circuits
+(one such conversion is done in the phone).
+For items like these there are a lot more than 2 or 3 different options
+around the world (or even in Europe).
+
+So even if you think that your "foreign" phone is working fine you may create
+problems for the one you are talking to by sending a wrong level to the line
+or (due to impedance mismatch) return a strong echo back to the one who is
+talking to you.
+
+Of course, in many cases foreign telephone equipment will work without any
+problems.
+But if you connect your equipment to some extreme subscriber line (short or
+long line) in a country which is extreme (in some technical telphony meaning
+of the word) you can be pretty sure that you will run into problems if you
+do not happen to have a suitably extreme piece of telepony terminal.
+
+
+Finn Stafsnes

@@ -1,0 +1,193 @@
+
+PHONE IN USE CIRCUIT
+--------------------
+
+I thought I would try to post the schematic.  This circuit requires a separate
+5 volt supply.  The branch of the circuit that contains C1, C2 & R5, R6 is 
+only used as a passive tap. (So you can record the line when the rest of the 
+circuit says 'off hook'.  It can be removed if not needed.  If used, it can 
+directly drive a microphone input to a portable recoreder.
+
+The Output of Q2 completes a path to ground when the phone lines gives an off
+hook reading.  This can drive a relay (for a tape recorder motor) or an LED.
+Be sure to include a current limiting resistor if an LED is used.  Also, D1
+may be ommited if a non-inductive load is used (Relays and incandescent (sp?)
+lamps are inductive)
+
+The LED thingy like this that I made for my phone flashes nicely when the phone
+rings (at the 20..25 Hz ring freq), so I can turn the ringer off, and still
+get silent ring indication (a feature, not a bug)
+
+Well, its not exactly postscript(tm), but if you stand back and squint, you'll
+get the idea.
+
+      R5
+<----+^v+                       +----------+--------* +6vdc (I use 5 volts)
+   R6>  |                       |        D1_
+     <  |                     R3>          ^          ___
+<----+  |                       <          +--------> Out
+     |  |                       | R8   Q2|/
+   C1=C2=                       +-^v-+---|
+     |  |   R1 BR1__        Q1|/     |   |\v
+*----+------v^---|  |--+--+---|    R4>     |
+        |        |~+|R7<C3L   |\v    <     |
+        |   R2   |~-|  >  T     |    |     |
+*-------+---v^---|__|--+--+-----+----+-----+--------* Ground
+                       |_
+                      ///
+
+R1, R2  2.2M                            Reproduced (kind of) without
+R3, R4  470K                            permission.   Copyright 1980
+R5      470                             TAB BOOKS Inc.
+R6      100
+R7      100K
+R8      220K
+C1, C2  0.01uf, 100V
+C3      1.0 uf
+BR1     Full wave Bridge Rectifier, about 200 VDC (or higher)
+D1      HEP R0052 (I use 1N400*)
+Q1, Q1  HEP S9100 -or- NTE-172a
+
+--------------------------------------------------------------------
+
+From: dthomas@mack.einet.com (David B. Thomas)
+Subject: Re: Telephone line in use light
+Date: 2 Jul 1994 23:13:28 -0600
+
+			TELEPHONE IN USE LIGHT
+			    David B. Thomas
+
+		-----+----+-------------+-------+-------- +9VDC
+		     |    |             |       |
+		     |    |       |\    R5      R6
+		     |    +-------|-\   |       |
+		     |    |       |  >--+      LED1
+		     |    |    +--|+/	|       v
+		     ^    |    |  |/	|       |
+		    CR2   R4   | 	|      C+
+		     |    |    |  |\	|   | /
+<+>--R1--+--R3--+----+--> | <--+--|-\	|   |/
+	 |      |    |    |       |  >--+-B-|
+phone    |	|    |    +-------|+/	    |\
+line	 |      |    ^    |       |/	    | \
+	R2      C1  CR1  CR3		       E+
+	 |	|    |    v	  U1	   Q1	|
+	 |	|    |    |			|
+<->------+------+----+----+---------------------+-------- GND
+
+R1,R2		1 Meg
+R3		10 K
+R4		1 K
+R5		4.7 K
+R6		470 ohm
+C1		.005 uF
+CR1-3		1N914 diode
+LED1		any old led
+Q1		2N2222 or 2N3904
+U1		LM339 quad comparator (be sure to connect power and gnd)
+--> <--		are connected (jump)
+^ or v		cathode of diode
++		connection
+9VDC		any old 9VDC wall transformer works nicely
+
+Circuit description:
+
+R1 and R2 form a voltage divider, insuring that the phone line sees a high
+impedance load and that high voltages (such as the ring voltage) are
+easily dissipated by the protective diodes (CR1 and CR2).  Also (obviously)
+they serve to divide all incoming voltages by two.  Capacitor C1
+filters out some of the audio signals that might otherwise make the LED
+flicker with speech.
+
+The voltage across a busy line is generally 5-10 volts, whereas a free
+line sits at more like 48 volts, and a dead line (definitely not in use!)
+sits at 0.  This circuit uses two comparators (sections of U1) to
+detect when the voltage is either too high or too low.  Normally Q1
+is kept turned on by pullup resistor R5, keeping LED1 illuminated.
+If either comparator detects incorrect voltage, its open-collector
+output goes into saturation and forces Q1 (and thus the LED) off.
+
+The top comparator section has its negative input connected to the +9V
+supply, so it will force the LED off if the voltage at its positive pin
+should exceed 9V.  Remember that we are dividing by two, so the phone
+line voltage would have to exceed 18V in order for this comparator
+to force the LED off.  This would normally happen when the phone is not
+in use (48V, remember?).
+
+The bottom comparator section has its positive input connected to the anode
+of a forward biased silicon diode, so it is sitting at 0.6V.  If its
+negative pin is ever lower than 0.6V, this comparator's output will
+go into saturation and force the LED off.  Remember, again, that
+we are dividing the phone line voltage by two, so the phone line voltage
+would have to drop below 1.2V in order for this comparator to turn off
+the LED.  This is clearly a dead line.
+
+Serving Suggestion:  Install the circuit in an out-of-the-way place,
+then connect the collector pin of Q1 and the +9VDC to unused
+(yellow or black) conductors in your home or office phone wiring.
+Then you can place additional LEDs (with current limiting resistors like R6)
+at each phone.  I once used a power transistor for Q1 and peppered our
+electronic repair shop with LEDs at every workstation.
+
+If you have any difficulty understanding my ascii art, the circuit theory,
+or anything about this posting, please feel free to contact me.
+
+Happy phone line monitoring!
+
+-------------------------------------------------
+
+From: dthomas@bbx.basis.com (David B. Thomas)
+Date: Mon, 11 Apr 1994 19:15:46 GMT
+
+>I'd like to add a little circut to my answering machine so it
+>hangs up (get discounected) when another phone is picked up.
+
+I've built something that is _close_ to what you want.  Perhaps between the
+two of us we can adapt it to your needs.  What I have is a cute circuit to
+avoid making too many trips when "switching phones".  You push and hold a
+button while you hang up the phone.  The circuit keeps the line active.
+When another phone (or the same phone -- doesn't matter) is picked up,
+the circuit lets go, so when you hang up again, you're really disconnected.
+
+I'll have to go home to find out component values, but the design is simple
+enough to draw:
+			SW1
+			__|__
+	       +---R2---     --/
+               |	      /
+	<+>----+--R1-----|SCR1>|----|
+phone line			    |
+	<->-------------------------|
+
+The ascii drawing is a little hokey but what I'm trying to show is that the
+SCR's anode is connected thru R1 to the positive side of the phone line.  The
+cathode is connected directly to the negative side.  When SW1 is pressed, it
+conducts some current through R2 to the gate of the SCR, turning it on.  If
+the phone is hung up while the button is still depressed, enough current will
+flow through the SCR to keep it latched, and the phone line will be kept
+active.  When another phone is picked up, enough current is stolen from
+this circuit that the SCR unlatches.  I like to put an LED in series as well,
+to serve as a status indicator.  Of course, R1's value must be carefully chosen
+to match the SCR, so that the current with no other phone devices on line
+is just enough to keep the SCR latched, and so that it cannot stay latched
+any more when another phone device comes on line.
+
+Anyway, to apply to your more specialized needs, perhaps it would be
+possible to put your answering machine in series with an SCR, as above.
+The ring voltage would probably get through well enough, and perhaps you
+could use a sneaky capacitor, diode and resistor to store some charge
+from the ring to fake out the button press.  Within a second or so, the
+capacitor would have discharged, effectively releasing the button, but
+by then the answering machine would be pulling current through the SCR,
+enough to keep it latched.  If another phone were picked up, it would steal
+enough current from the SCR to cause it to drop, dropping the answering machine
+along with it.
+
+The last paragraph is pure speculation but I have a working circuit for
+the "phone line convenience switcher" which I can give you if you are
+interested.  It's just like I drew up above but I used an LED in series
+as an indicator and of course I'll give you the actual resistor values and
+type of scr that I made to work.
+
+-------------------------------------------------
+
